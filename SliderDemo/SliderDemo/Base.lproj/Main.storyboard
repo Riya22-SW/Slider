@@ -42,6 +42,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62F-Hg-nKw">
+                                <rect key="frame" x="157" y="726" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btnpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tn-ik-AHd"/>
+                                </connections>
+                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="ZDO-XY-CzH">
                                 <rect key="frame" x="9" y="463" width="370" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,6 +65,7 @@
                     <navigationItem key="navigationItem" id="Iq7-EC-0Tt"/>
                     <connections>
                         <outlet property="bSlider" destination="ZDO-XY-CzH" id="6at-Te-KWa"/>
+                        <outlet property="btn" destination="62F-Hg-nKw" id="q5Z-QR-ZDL"/>
                         <outlet property="colorview" destination="WuQ-1w-1K9" id="Zsz-8q-bbi"/>
                         <outlet property="gSlider" destination="ycB-DY-hfq" id="lLq-tz-f71"/>
                         <outlet property="opacitySlider" destination="TNI-Mt-yI9" id="LXU-rd-C6k"/>

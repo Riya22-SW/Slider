@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var opacitySlider: UISlider!
     @IBOutlet weak var bSlider: UISlider!
     
+
+    @IBOutlet weak var btn: UIButton!
     private var rvalue:CGFloat!
     private var gvalue:CGFloat!
     private var bvalue:CGFloat!
@@ -25,8 +27,27 @@ class ViewController: UIViewController {
         setColor(r: 0, g: 0, b: 0, o: 0)
         
     }
+    
     func setColor(r: CGFloat, g: CGFloat, b: CGFloat, o: CGFloat) {
         colorview.backgroundColor =  UIColor(red: r/255, green: g/255, blue: b/255, alpha: o)
+//        btn.backgroundColor = UIColor(red: r/255, green: g/255, blue: b/255, alpha: o)
+//        self.view.backgroundColor = UIColor(red: r/255, green: g/255, blue: b/255, alpha: o)
+    }
+    
+    func setColor1(r: CGFloat, g: CGFloat, b: CGFloat, o: CGFloat) {
+//        colorview.backgroundColor =  UIColor(red: r/255, green: g/255, blue: b/255, alpha: o)
+//        btn.backgroundColor = UIColor(red: r/255, green: g/255, blue: b/255, alpha: o)
+        self.view.backgroundColor = UIColor(red: r/255, green: g/255, blue: b/255, alpha: o)
+    }
+    
+    
+    @IBAction func btnpress(_ sender: Any) {
+        rvalue = CGFloat(rSlider.value)
+        gvalue = CGFloat(gSlider.value)
+        bvalue = CGFloat(bSlider.value)
+        opacityvalue = CGFloat(opacitySlider.value)
+        
+        setColor1(r: rvalue, g: gvalue, b: bvalue, o: opacityvalue)
     }
 
     @IBAction func rSliderchanged(_ sender: Any) {
